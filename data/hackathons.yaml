@@ -1,27 +1,25 @@
 - meta:
-  - name: Hackathons
+  - name: 'Hackathons'
 - data:
-  - name: Facebook Camp Hackathon
-    date: 2011-01-21
-    project: YouW.ca
+  - name: 'Facebook Camp Hackathon'
+    date: '2011-01-21'
+    project: 'YouW.ca'
     description:
-      - First attempt to build an API for UWaterloo
-    url: http://YouW.ca
+      - 'First attempt to build an API for UWaterloo'
+    url: 'http://YouW.ca'
     outcomes:
-      - Won 'Overall Awesomeness' award
-      - Still in use at the company
     notes: 
-      - First hackathon
+      - 'First hackathon'
     people:
-      - Thomas Dimson
-  - name: Tagged 2012 Hackathon
-    date: 2012-03-14
-    project: Ned
+      - 'Thomas Dimson'
+  - name: 'Tagged 2012 Hackathon'
+    date: '2012-03-14'
+    project: 'Ned'
     description:
-      - Bot for HipChat that added lunch menu, siteop cluster status, googling, spotifying integration
-    url: http://github.com/KartikTalwar/Ned
+      - 'Bot for HipChat that added lunch menu, siteop cluster status, googling, spotifying integration'
+    url: 'http://github.com/KartikTalwar/Ned'
     outcomes:
-      - Won 'Overall Awesomeness' award
-      - Still in use at the company
+      - 'Won Overall Awesomeness award'
+      - 'Still in use at the company'
     notes: 
-      - Learnt node.js that night
+      - 'Learnt node.js that night'
