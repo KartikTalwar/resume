@@ -1,7 +1,7 @@
 import yaml
 from pprint import pprint as pp
 
-r = open('data/hackathons.yaml').read()
+r = open('data/work.yaml').read()
 y = yaml.load(r)
 
 
