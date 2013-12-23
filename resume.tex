@@ -1,0 +1,308 @@
+\documentclass[10pt, oneside]{resume}                            % use "amsart" instead of "article" for AMSLaTeX format
+\usepackage [top = 1 cm, bottom = 1 cm, headsep = 0 pt, headheight = 0 pt, width = 18.00 cm] {geometry}                   % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                                              % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                                           % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}                                % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}                               % Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
+\usepackage{enumitem}                               % TeX will automatically convert eps --> pdf in pdflatex    
+\usepackage{amssymb}
+\usepackage{titling}
+\usepackage{hyperref}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\DeclareTextSymbolDefault{\textbullet}{OMS}
+\pagenumbering{gobble}
+
+\newcommand{\pspace}
+{
+  \vspace{-0.05 in}
+}\pspace
+
+\newcommand{\myrule} [3] []
+{
+        \begin{tikzpicture}
+     \draw[#2-#3, ultra thick, #1] (0,0) to (0.5\linewidth,0);
+      \draw[#2-#3,ultra thick, #1] (0.5\linewidth,0) to (\linewidth,0);
+   \end{tikzpicture}
+}
+
+\newcommand{\li}{-0.07 in}
+
+\name{Kartik Talwar} % Your name
+%\address{123 Broadway \\ City, State 12345} % Your address
+%\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
+\address{(646) 389-4089 \\ kartik@kartikt.com \\ github.com/kartiktalwar} % Your phone number and email
+
+
+\date{}
+\begin{document}
+
+% \begin{tabular*}{7in}{l@{\extracolsep{\fill}}ll}
+% \textbf{\Large Kartik Talwar} & \href{https://twitter.com/TheRealKartik}{\nolinkurl{@TheRealKartik}} & 646-389-4089 \\
+
+%  & \href{http://kartikt.com}{\nolinkurl{http://kartikt.com} } & \href{mailto:kartik@kartikt.com}{\nolinkurl{kartik@kartikt.com}}
+%  \\
+
+% \end{tabular*}
+% \hrule height 0.5pt
+
+\newcommand{\CC}
+{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf+}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf+}}\def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf++}}}
+
+\section*{\large{Strengths \& Highlights}\vspace{1.25 pt} \hrule height 0.0pt}
+\begin{tabular}{lll}
+
+\bf{Languages} & \textemdash & Python, PHP, JavaScript/Node.js, Ruby, C\verb!++!, Java, C, LabVIEW \\
+\bf{Databases} & \textemdash &  MySQL, Firebase, ElasticSearch, Riak, MongoDB, SQLite, OracleDB \\
+\bf{Web} & \textemdash &  GitHub, AWS, WordPress, [Facebook, Twitter, Twilio, Google] API \\
+\bf{Markup} & \textemdash &  HTML, CSS, XML, JSON, MarkDown, Puppet, \LaTeX  \\
+\bf{Tools} & \textemdash &  Git, Vim, Sublime, Eclipse, Putty, Dreamweaver, Photoshop, Office  \\
+\bf{OS} & \textemdash &  Windows, *nix, Mac, Android \\
+% \bf{Various} & \textemdash &  Sense of humor, Approximate knowledge of many things \\
+\end{tabular}
+% \end{}
+% \end{rSection}
+
+
+
+%\vspace{-0.2 in}
+\section*{\large{Work Experience}\vspace{1.25 pt} \hrule height 0.0pt}
+  \vspace{ 0.05 in}
+
+\pspace
+  \subsection*{\normalsize{\bfseries API Developer}, University of Waterloo, Waterloo \hfill Present}
+  \pspace
+  \begin{itemize}
+  \setlength{\itemsep}{2pt}
+    \item Lead developer for the University of Waterloo API
+    \vspace{\li}
+    \item Maintainer of open source contributions and developer community
+    \vspace{\li}
+  \end{itemize}
+  \vspace{-0.18 in}
+
+  \subsection*{\normalsize{\bfseries Teaching Assistant}, University of Waterloo, Waterloo \hfill 2013}
+  \pspace
+  \begin{itemize}
+  \setlength{\itemsep}{2pt}
+    \item Assistant for Computational Physics under Dr. Chris O’Donovan
+    \vspace{\li}
+    \item Responsible for conducting tutorials, proctoring and assignment help
+    \vspace{\li}
+  \end{itemize}
+  \vspace{-0.18 in}
+
+  \subsection*{\normalsize{\bfseries Infrastructure Software Developer}, Salesforce, San Francisco \hfill 2013}
+  \pspace
+  \begin{itemize}
+  \setlength{\itemsep}{2pt}
+    \item Member of datacenter automation and infrastructure capacity planning
+    \vspace{\li}
+    \item Developed cluster monitoring, analysis and automation tools
+    \vspace{\li}
+  \end{itemize}
+  \vspace{-0.18 in}
+
+
+  \subsection*{\normalsize{\bfseries Data Specialist}, University of Waterloo, Waterloo \hfill 2012}
+  \pspace
+  \begin{itemize}
+  \setlength{\itemsep}{2pt}
+    \item Architected processes for accessing and opening data from University systems
+    \vspace{\li}
+    \item Merged existing (internal and external) APIs into a central location
+    \vspace{\li}
+  \end{itemize}
+  \vspace{-0.18 in}
+
+
+  \subsection*{\normalsize{\bfseries Software Engineer}, Tagged, San Francisco \hfill 2012}
+  \pspace
+  \begin{itemize}
+  \setlength{\itemsep}{2pt}
+    \item Worked on real-time logging infrastructure and abnormal cluster behavior detections
+    \vspace{\li}
+    \item Winner of Tagged 2012 Hackathon
+    \vspace{\li}
+  \end{itemize}
+  \vspace{-0.18 in}
+
+  \subsection*{\normalsize{\bfseries User Interface Engineer}, Bookneto, Kitchener \hfill 2011}
+  \pspace
+  \begin{itemize}
+  \setlength{\itemsep}{2pt}
+    \item Defined the visual appeal of the site, in terms of UI and UX
+    \vspace{\li}
+    \item Designed and modeled the front-end user interface for the Analytics Platform
+    \vspace{\li}
+  \end{itemize}
+  \vspace{-0.18 in}
+
+  \subsection*{\normalsize{\bfseries Freelance Developer}, Elance, Toronto \hfill 2008 - 2012}
+  \pspace
+  \begin{itemize}
+  \setlength{\itemsep}{2pt}
+    \item Specialized in WordPress development and social media brand development
+    \vspace{\li}
+  \end{itemize}
+  \vspace{-0.18 in}
+
+\vspace{0.05 in}
+
+
+\section*{\large{Extracurriculars}\vspace{1.25 pt} \hrule height 0.0pt}
+  \vspace{ 0.05 in}
+
+\pspace
+
+  \subsection*{\normalsize{\bfseries Vice President}, Undergraduate Physics Society \hfill 2011 - Present}
+  \pspace
+  \begin{itemize}
+  \setlength{\itemsep}{2pt}
+    \item Responsible for event planning, student outreach and bringing donuts to class
+    \vspace{\li}
+    \item Member of the Board of Directors at the Science Society
+    \vspace{\li}
+  \end{itemize}
+  \vspace{-0.18 in}
+
+  \subsection*{\normalsize{\bfseries Velocity Incubator}, University of Waterloo \hfill 2012-2013}
+  \pspace
+  \begin{itemize}
+  \setlength{\itemsep}{2pt}
+    \item Residence for student innovators, tech enthusiasts and entrepreneurs
+    \vspace{\li}
+    \item Helped startups in Communitech with product software development 
+    \vspace{\li}
+  \end{itemize}
+  \vspace{-0.18 in}
+
+  \subsection*{\normalsize{\bfseries Vice President}, University of Waterloo Web Designers Club \hfill 2010-2011}
+  \pspace
+  \begin{itemize}[rightmargin=\dimexpr\linewidth-13cm-\leftmargin\relax]
+  \setlength{\itemsep}{2pt}
+    \item Planned and developed lectures and tutorials for novice developers on the basics of web design and development (HTML, CSS, PHP, SQL, WordPress)
+    \vspace{\li}
+  \end{itemize}
+  \vspace{-0.18 in}
+
+  \subsection*{\normalsize{\bfseries Team Captain}, Emery CI FIRST Robotics Team \hfill 2007-2010}
+  \pspace
+  \begin{itemize}
+  \setlength{\itemsep}{2pt}
+    \item Managed the mechanical, electrical, media and programming teams
+    \vspace{\li}
+    \item Led the team to 8th alliance captain position at Waterloo Regional 
+    \vspace{\li}
+  \end{itemize}
+  \vspace{-0.18 in}
+
+
+\section*{\large{Volunteer Work}\vspace{1.25 pt}\hrule height 0.0 pt}
+
+  \vspace{ 0.05 in}
+
+  \begin{itemize}
+    \item {\normalsize{\bfseries Regional Organizer}, PennApps/MHacks/HackMIT/Y-Hack/UofT Hacks \hfill 2013-2014}
+    \vspace{\li}
+
+    \item {\normalsize{\bfseries Technical Mentor}, San Francisco CoderDojo \hfill 2012-2013}
+    \vspace{\li}
+
+    \item {\normalsize{\bfseries Event Organizer}, TEDxUW \hfill 2011}
+    \vspace{\li}
+
+    \item {\normalsize{\bfseries Physics Representative}, University of Waterloo \hfill 2010}
+    \vspace{\li}
+
+    \item {\normalsize{\bfseries Homecoming Volunteer}, University of Waterloo \hfill 2010}
+    \vspace{\li}
+
+    \item {\normalsize{\bfseries Math Peer Tutor}, Emery CI \& Humber Summit Middle School \hfill 2009-2010}
+    \vspace{\li}
+
+    \item {\normalsize{\bfseries Cyber-Science/Robotics Club Representative}, Emery CI \hfill 2008-2010}
+    \vspace{\li}
+
+    \item {\normalsize{\bfseries Head Light Technician}, Emery CI \hfill 2007-2010}
+    \vspace{\li}
+
+  \end{itemize}
+
+
+\section*{\large{Honors \& Achievements}\vspace{1.25 pt}\hrule height 0.0 pt}
+
+  \vspace{ 0.05 in}
+
+  \begin{itemize}
+    \item {\normalsize{Winner - AngelHack Silicon Valley}}
+    \vspace{\li}
+
+    \item {\normalsize{Top10 - University of Toronto Hackathon}}
+    \vspace{\li}
+
+    \item {\normalsize{Finalist - Greylock Hackfest }}
+    \vspace{\li}
+
+    \item {\normalsize{Desktop Automation Winner - Salesforce DevOps Hackathon }}
+    \vspace{\li}
+
+    \item {\normalsize{Launch Hackathon - Yammer Award Winner }}
+    \vspace{\li}
+
+    \item {\normalsize{University of Waterloo Physics Alumni Award }}
+    \vspace{\li}
+
+    \item {\normalsize{University of Waterloo Merit Scholarship }}
+    \vspace{\li}
+
+    \item {\normalsize{Emery Collegiate Institute Merit Scholarship }}
+    \vspace{\li}
+
+    \item {\normalsize{Robotics Scholarship }}
+    \vspace{\li}
+
+    \item {\normalsize{Community Leadership Scholarship }}
+    \vspace{\li}
+
+    \item {\normalsize{Emery CI Honor Roll (All Semesters) \& Ontario Scholars’ Award }}
+    \vspace{\li}
+
+    \item {\normalsize{Finalist and a nominee for the Tory’s LLP Patent Award }}
+    \vspace{\li}
+
+    \item {\normalsize{Bronze Level achiever for The Duke of Edinburgh Award }}
+    \vspace{\li}
+
+    \item {\normalsize{Silver medal winner at the Apotex Innovators Fair }}
+    \vspace{\li}
+
+    \item {\normalsize{Physics and Math Award for exemplary academic achievement }}
+    \vspace{\li}
+
+    \item {\normalsize{Winner of York University Olympics Robocode event}}
+    \vspace{\li}
+  \end{itemize}
+  \vspace{-0.18 in}
+
+
+
+\section*{\large{Education} \vspace{1.25 pt}\hrule height 0.0pt}
+  \vspace{ 0.05 in}
+
+  \subsection*{\normalsize{Candidate for Bachelor of Science \hfill 2010 - 2015}}
+    \vspace{ -0.10 in}
+    {\normalsize{University of Waterloo}} \\
+    {\normalsize{\indent \bfseries{Relevant Courses:} Computational Physics, Astrophysics, Linear Algebra, Calculus}}
+    \vspace{ -0.05 in}
+
+  \subsection*{\normalsize{Ontario Secondary School Diploma \hfill 2006 - 2010}}
+    \vspace{ -0.10 in}
+    {\normalsize{Emery Collegiate Institute}} \\
+    {\normalsize{\indent \bfseries{Relevant Courses:} Computer Engineering, Advanced Functions, Calculus, Physics}}
+    \vspace{ 0.00 in}
+
+
+
+\end{document}  
