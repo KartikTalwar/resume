@@ -35,7 +35,7 @@
 \def \name#1{\def\@name{#1}} % Defines the \name command to set name
 \def \@name {} % Sets \@name to empty by default
 
-\def \addressSep {$\diamond$} % Set default address separator to a diamond
+\def \addressSep {$|$} % Set default address separator to a diamond
 
 \def\StrReplace#1#2#3{
   \IfSubStr{#3}{#1}{
@@ -72,7 +72,7 @@
 \def \printname {
   \begingroup
     \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
-    \nameskip\break
+  \vspace{0.4 em}
   \endgroup
 }
 
@@ -144,7 +144,7 @@
    {\bfseries{#1}}, #2, {\em #3} \hfill {\StrReplace{ }{}{#4}} % Bold company name and date on the right
  }
  \smallskip
-  \begin{list}{{\bfseries{Relevant Courses:}}}{\leftmargin=3.5em\rightmargin=\dimexpr\linewidth-14cm-\leftmargin\relax} % \cdot used for bullets, no indentation
+  \em\begin{list}{\bfseries{Relevant Courses:}}{\leftmargin=3.5em\rightmargin=\dimexpr\linewidth-14cm-\leftmargin\relax} % \cdot used for bullets, no indentation
    \itemsep -0.5 em \vspace{-0.7 em} % Compress items in list together for aesthetics
   }{
   \end{list}
