@@ -8,7 +8,7 @@
 \usepackage{amssymb}
 \usepackage{titling}
 \usepackage{hyperref}
-
+\usepackage{xstring}
 \usepackage{tikz}
 \usetikzlibrary{arrows}
 \DeclareTextSymbolDefault{\textbullet}{OMS}
@@ -66,138 +66,71 @@
 
 
 
-%\vspace{-0.2 in}
-\section*{\large{Work Experience}\vspace{1.25 pt} \hrule height 0.0pt}
-  \vspace{ 0.05 in}
+\begin{rSection}{Work Experience}
 
-\pspace
-  \subsection*{\normalsize{\bfseries API Developer}, University of Waterloo, Waterloo \hfill Present}
-  \pspace
-  \begin{itemize}
-  \setlength{\itemsep}{2pt}
+  \begin{rSubsection}{API Developer}{University of Waterloo}{San Francisco}{Present}
     \item Lead developer for the University of Waterloo API
-    \vspace{\li}
     \item Maintainer of open source contributions and developer community
-    \vspace{\li}
-  \end{itemize}
-  \vspace{-0.18 in}
+  \end{rSubsection}
 
-  \subsection*{\normalsize{\bfseries Teaching Assistant}, University of Waterloo, Waterloo \hfill 2013}
-  \pspace
-  \begin{itemize}
-  \setlength{\itemsep}{2pt}
+  \begin{rSubsection}{Teaching Assistant}{University of Waterloo}{Waterloo}{2013}
     \item Assistant for Computational Physics under Dr. Chris O’Donovan
-    \vspace{\li}
     \item Responsible for conducting tutorials, proctoring and assignment help
-    \vspace{\li}
-  \end{itemize}
-  \vspace{-0.18 in}
+  \end{rSubsection}
 
-  \subsection*{\normalsize{\bfseries Infrastructure Software Developer}, Salesforce, San Francisco \hfill 2013}
-  \pspace
-  \begin{itemize}
-  \setlength{\itemsep}{2pt}
+  \begin{rSubsection}{Infrastructure Software Developer}{Salesforce}{San Francisco}{2013}
     \item Member of datacenter automation and infrastructure capacity planning
-    \vspace{\li}
     \item Developed cluster monitoring, analysis and automation tools
-    \vspace{\li}
-  \end{itemize}
-  \vspace{-0.18 in}
+  \end{rSubsection}
 
-
-  \subsection*{\normalsize{\bfseries Data Specialist}, University of Waterloo, Waterloo \hfill 2012}
-  \pspace
-  \begin{itemize}
-  \setlength{\itemsep}{2pt}
+  \begin{rSubsection}{Data Specialist}{University of Waterloo}{Waterloo}{2012}
     \item Architected processes for accessing and opening data from University systems
-    \vspace{\li}
     \item Merged existing (internal and external) APIs into a central location
-    \vspace{\li}
-  \end{itemize}
-  \vspace{-0.18 in}
+  \end{rSubsection}
 
-
-  \subsection*{\normalsize{\bfseries Software Engineer}, Tagged, San Francisco \hfill 2012}
-  \pspace
-  \begin{itemize}
-  \setlength{\itemsep}{2pt}
+  \begin{rSubsection}{Software Engineer}{Tagged}{San Francisco}{2012}
     \item Worked on real-time logging infrastructure and abnormal cluster behavior detections
-    \vspace{\li}
     \item Winner of Tagged 2012 Hackathon
-    \vspace{\li}
-  \end{itemize}
-  \vspace{-0.18 in}
+  \end{rSubsection}
 
-  \subsection*{\normalsize{\bfseries User Interface Engineer}, Bookneto, Kitchener \hfill 2011}
-  \pspace
-  \begin{itemize}
-  \setlength{\itemsep}{2pt}
+  \begin{rSubsection}{User Interface Engineer}{Bookneto}{Kitchener}{2011}
     \item Defined the visual appeal of the site, in terms of UI and UX
-    \vspace{\li}
     \item Designed and modeled the front-end user interface for the Analytics Platform
-    \vspace{\li}
-  \end{itemize}
-  \vspace{-0.18 in}
+  \end{rSubsection}
 
-  \subsection*{\normalsize{\bfseries Freelance Developer}, Elance, Toronto \hfill 2008 - 2012}
-  \pspace
-  \begin{itemize}
-  \setlength{\itemsep}{2pt}
+  \begin{rSubsection}{Freelance Developer}{Elance}{Toronto}{2008 - 2012}
     \item Specialized in WordPress development and social media brand development
-    \vspace{\li}
-  \end{itemize}
-  \vspace{-0.18 in}
+  \end{rSubsection}
 
-\vspace{0.05 in}
+\end{rSection}
 
 
-\section*{\large{Extracurriculars}\vspace{1.25 pt} \hrule height 0.0pt}
-  \vspace{ 0.05 in}
+\begin{rSection}{Extracurriculars}
 
-\pspace
-
-  \subsection*{\normalsize{\bfseries Vice President}, Undergraduate Physics Society \hfill 2011 - Present}
-  \pspace
-  \begin{itemize}
-  \setlength{\itemsep}{2pt}
+  \begin{rSubsection}{Vice President}{Undergraduate Physics Society}{}{2011 - Present}
     \item Responsible for event planning, student outreach and bringing donuts to class
-    \vspace{\li}
     \item Member of the Board of Directors at the Science Society
-    \vspace{\li}
-  \end{itemize}
-  \vspace{-0.18 in}
+  \end{rSubsection}
 
-  \subsection*{\normalsize{\bfseries Velocity Incubator}, University of Waterloo \hfill 2012-2013}
-  \pspace
-  \begin{itemize}
-  \setlength{\itemsep}{2pt}
+  \begin{rSubsection}{Velocity Incubator}{University of Waterloo}{}{2012-2013}
     \item Residence for student innovators, tech enthusiasts and entrepreneurs
-    \vspace{\li}
-    \item Helped startups in Communitech with product software development 
-    \vspace{\li}
-  \end{itemize}
-  \vspace{-0.18 in}
+    \item Helped startups in Communitech with product and software development
+  \end{rSubsection}
 
-  \subsection*{\normalsize{\bfseries Vice President}, University of Waterloo Web Designers Club \hfill 2010-2011}
-  \pspace
-  \begin{itemize}[rightmargin=\dimexpr\linewidth-13cm-\leftmargin\relax]
-  \setlength{\itemsep}{2pt}
+  \begin{rSubsection}{Vice President}{University of Waterloo Web Designers Club}{}{2010 - 2011}
     \item Planned and developed lectures and tutorials for novice developers on the basics of web design and development (HTML, CSS, PHP, SQL, WordPress)
-    \vspace{\li}
-  \end{itemize}
-  \vspace{-0.18 in}
+  \end{rSubsection}
 
-  \subsection*{\normalsize{\bfseries Team Captain}, Emery CI FIRST Robotics Team \hfill 2007-2010}
-  \pspace
-  \begin{itemize}
-  \setlength{\itemsep}{2pt}
+  \begin{rSubsection}{Team Captain}{Emery CI FIRST Robotics Team}{}{2007-2010}
     \item Managed the mechanical, electrical, media and programming teams
-    \vspace{\li}
     \item Led the team to 8th alliance captain position at Waterloo Regional 
-    \vspace{\li}
-  \end{itemize}
-  \vspace{-0.18 in}
+  \end{rSubsection}
 
+\end{rSection}
+
+
+
+ 
 
 \section*{\large{Volunteer Work}\vspace{1.25 pt}\hrule height 0.0 pt}
 

@@ -37,6 +37,10 @@
 
 \def \addressSep {$\diamond$} % Set default address separator to a diamond
 
+\def\StrReplace#1#2#3{
+  \IfSubStr{#3}{#1}{
+    \StrSubstitute{#3}{#1}{#2}}{#3}}
+
 % One, two or three address lines can be specified 
 \let \@addressone \relax
 \let \@addresstwo \relax
@@ -111,16 +115,17 @@
 %----------------------------------------------------------------------------------------
 
 \newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
- {\bf #1} \hfill {#2} % Bold company name and date on the right
- \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
-  \\
-  {\em #3} \hfill {\em #4} % Italic job title and location
-  }\smallskip
-  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+ \ifthenelse{\equal{#3}{}}{
+   {\bfseries{#1}}, #2 \hfill {\StrReplace{ }{}{#4}} % Bold company name and date on the right
+ }{ % If the third argument is not specified, don't print the job title and location line
+   {\bfseries{#1}}, #2, {\em #3} \hfill {\StrReplace{ }{}{#4}} % Bold company name and date on the right
+ }
+ \smallskip
+  \begin{list}{$\bullet$}{\leftmargin=2em\rightmargin=\dimexpr\linewidth-14cm-\leftmargin\relax} % \cdot used for bullets, no indentation
+   \itemsep -0.5 em \vspace{-0.7 em} % Compress items in list together for aesthetics
   }{
   \end{list}
-  \vspace{0.5em} % Some space after the list of bullet points
+  \vspace{-0.2 em} % Some space after the list of bullet points
 }
 
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
