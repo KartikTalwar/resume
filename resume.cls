@@ -58,7 +58,7 @@
 \def \printname {
   \begingroup
     \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
-  \vspace{0.3 em}
+  \vspace{0.35 em}
   \endgroup
 }
 
@@ -78,7 +78,7 @@
     \printaddress{\@addresstwo}}
      \@ifundefined{@addressthree}{}{ % Print the third address if specified
     \printaddress{\@addressthree}}
-    \vspace{-0.5 em}
+    \vspace{-0.2 em}
 }
 
 
