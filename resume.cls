@@ -1,24 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Medium Length Professional CV - RESUME CLASS FILE
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% This class file defines the structure and design of the template. 
-%
-% Original header:
-% Copyright (C) 2010 by Trey Hunner
-%
-% Copying and distribution of this file, with or without modification,
-% are permitted in any medium without royalty provided the copyright
-% notice and this notice are preserved. This file is offered as-is,
-% without any warranty.
-%
-% Created by Trey Hunner and modified by www.LaTeXTemplates.com
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\ProvidesClass{resume}[2010/07/10 v0.9 Resume class]
+\ProvidesClass{resume}[2013/12/24 v1.0 Resume class]
 
 \LoadClass[11pt,letterpaper]{article} % Font size and paper type
 
@@ -28,13 +8,19 @@
 
 \pagestyle{empty} % Suppress page numbers
 
+
 %----------------------------------------------------------------------------------------
 %	HEADINGS COMMANDS: Commands for printing name and address
 %----------------------------------------------------------------------------------------
 
+\def\namesize{\huge} % Size of the name at the top of the document
+\def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
+\def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
+\def\nameskip{\bigskip} % The space after your name at the top
+\def\sectionskip{\medskip} % The space after the heading section
+
 \def \name#1{\def\@name{#1}} % Defines the \name command to set name
 \def \@name {} % Sets \@name to empty by default
-
 \def \addressSep {$|$} % Set default address separator to a diamond
 
 \def\StrReplace#1#2#3{
@@ -54,7 +40,7 @@
   \@ifundefined{@addressthree}{
   \def \@addressthree {#1}
   }{
-     \def \@addressone {#1}
+    \def \@addressone {#1}
   }}
 }
 
@@ -72,15 +58,17 @@
 \def \printname {
   \begingroup
     \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
-  \vspace{0.4 em}
+  \vspace{0.3 em}
   \endgroup
 }
+
 
 %----------------------------------------------------------------------------------------
 %	PRINT THE HEADING LINES
 %----------------------------------------------------------------------------------------
 
 \let\ori@document=\document
+
 \renewcommand{\document}{
   \ori@document  % Begin document
   \printname % Print the name specified with \name
@@ -90,7 +78,9 @@
     \printaddress{\@addresstwo}}
      \@ifundefined{@addressthree}{}{ % Print the third address if specified
     \printaddress{\@addressthree}}
+    \vspace{-0.5 em}
 }
+
 
 %----------------------------------------------------------------------------------------
 %	SECTION FORMATTING
@@ -110,60 +100,57 @@
   \end{list}
 }
 
+
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE FORMATTING
 %----------------------------------------------------------------------------------------
 
-\newenvironment{rSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
- \ifthenelse{\equal{#3}{}}{
-   {\bfseries{#1}}, #2 \hfill {\StrReplace{ }{}{#4}} % Bold company name and date on the right
- }{ % If the third argument is not specified, don't print the job title and location line
-   {\bfseries{#1}}, #2, {\em #3} \hfill {\StrReplace{ }{}{#4}} % Bold company name and date on the right
- }
- \smallskip
-  \begin{list}{$\bullet$}{\leftmargin=2em\rightmargin=\dimexpr\linewidth-14cm-\leftmargin\relax} % \cdot used for bullets, no indentation
-   \itemsep -0.5 em \vspace{-0.7 em} % Compress items in list together for aesthetics
+% 4 input arguments - title, company, location and year(s) employed
+\newenvironment{rSubsection}[4]{
+  \ifthenelse{\equal{#3}{}} {
+    {\bfseries{#1}}, #2 \hfill {\StrReplace{ }{}{#4}} % Print this if location is not specified
+  } {
+    {\bfseries{#1}}, #2, {\em #3} \hfill {\StrReplace{ }{}{#4}} % Print italicized location if specified
+  }
+  \smallskip
+  \begin{list}{$\bullet$} {\leftmargin=2em\rightmargin=\dimexpr\linewidth-14cm-\leftmargin\relax}
+  \itemsep -0.5 em
+  \vspace{-0.7 em}
   }{
   \end{list}
-  \vspace{-0.2 em} % Some space after the list of bullet points
-}
-
-\newenvironment{rSubListing}{ % 4 input arguments - company name, year(s) employed, job title and location
-  \begin{list}{$\bullet$}{\leftmargin=1em\rightmargin=0.75em} % \cdot used for bullets, no indentation
-   \itemsep -0.5 em \vspace{-0.0 em} % Compress items in list together for aesthetics
-  }{
-  \end{list}
-  \vspace{-0.2 em} % Some space after the list of bullet points
+  \vspace{-0.2 em}
 }
 
 
-\newenvironment{rEducation}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
- \ifthenelse{\equal{#3}{}}{
-   {\bfseries{#1}}, #2 \hfill {\StrReplace{ }{}{#4}} % Bold company name and date on the right
- }{ % If the third argument is not specified, don't print the job title and location line
-   {\bfseries{#1}}, #2, {\em #3} \hfill {\StrReplace{ }{}{#4}} % Bold company name and date on the right
- }
- \smallskip
-  \em\begin{list}{\bfseries{Relevant Courses:}}{\leftmargin=3.5em\rightmargin=\dimexpr\linewidth-14cm-\leftmargin\relax} % \cdot used for bullets, no indentation
-   \itemsep -0.5 em \vspace{-0.7 em} % Compress items in list together for aesthetics
+%----------------------------------------------------------------------------------------
+% WORK LISTING FORMATTING
+%----------------------------------------------------------------------------------------
+
+% Regular list with no indentation
+\newenvironment{rSubListing}{
+  \begin{list}{$\bullet$}{\leftmargin=1em\rightmargin=0.75em}
+    \itemsep -0.5 em \vspace{-0.0 em}
   }{
   \end{list}
-  \vspace{-0.2 em} % Some space after the list of bullet points
+  \vspace{-0.2 em}
 }
 
 
-\newenvironment{rProject}{ % 4 input arguments - company name, year(s) employed, job title and location
-  \begin{list}{}{\leftmargin=0em\rightmargin=0.75em} % \cdot used for bullets, no indentation
-   \itemsep -0.5 em \vspace{0.05 em} % Compress items in list together for aesthetics
+%----------------------------------------------------------------------------------------
+% EDUCATION FORMATTING
+%----------------------------------------------------------------------------------------
+
+% 4 input arguments - school, degree, major and year
+\newenvironment{rEducation}[4]{
+  \ifthenelse{\equal{#3}{}} {
+    {\bfseries{#1}}, #2 \hfill {\StrReplace{ }{}{#4}} % Print this if location is not specified
+  } {
+    {\bfseries{#1}}, #2, {\em #3} \hfill {\StrReplace{ }{}{#4}} % Print italicized location if specified
+  }
+  \smallskip
+  \em\begin{list}{\bfseries{Relevant Courses:}}{\leftmargin=3.5em\rightmargin=\dimexpr\linewidth-14cm-\leftmargin\relax} % prefix li with 'Relevant Courses:'
+  \itemsep -0.5 em \vspace{-0.7 em}
   }{
   \end{list}
-  \vspace{-0.2 em} % Some space after the list of bullet points
+  \vspace{-0.2 em}
 }
-
-
-% The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
-\def\namesize{\huge} % Size of the name at the top of the document
-\def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
-\def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
-\def\nameskip{\bigskip} % The space after your name at the top
-\def\sectionskip{\medskip} % The space after the heading section
