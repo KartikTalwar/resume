@@ -137,11 +137,14 @@
 }
 
 
-\newenvironment{rEducation}[3]{ % 4 input arguments - company name, year(s) employed, job title and location
- {\bfseries{#1}} \hfill {\StrReplace{ }{}{#3}} \\ 
- {#2}
+\newenvironment{rEducation}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
+ \ifthenelse{\equal{#3}{}}{
+   {\bfseries{#1}}, #2 \hfill {\StrReplace{ }{}{#4}} % Bold company name and date on the right
+ }{ % If the third argument is not specified, don't print the job title and location line
+   {\bfseries{#1}}, #2, {\em #3} \hfill {\StrReplace{ }{}{#4}} % Bold company name and date on the right
+ }
  \smallskip
-  \begin{list}{{\bfseries{Relevant Courses:}}}{\leftmargin=3.5em\rightmargin=0.75em} % \cdot used for bullets, no indentation
+  \begin{list}{{\bfseries{Relevant Courses:}}}{\leftmargin=3.5em\rightmargin=\dimexpr\linewidth-14cm-\leftmargin\relax} % \cdot used for bullets, no indentation
    \itemsep -0.5 em \vspace{-0.7 em} % Compress items in list together for aesthetics
   }{
   \end{list}
