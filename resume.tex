@@ -1,241 +1,148 @@
-\documentclass[10pt, oneside]{resume}                            % use "amsart" instead of "article" for AMSLaTeX format
-\usepackage [top = 1 cm, bottom = 1 cm, headsep = 0 pt, headheight = 0 pt, width = 18.00 cm] {geometry}                   % See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper}                                              % ... or a4paper or a5paper or ... 
-%\geometry{landscape}                                           % Activate for for rotated page geometry
-%\usepackage[parfill]{parskip}                                % Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}                               % Use pdf, png, jpg, or eps� with pdflatex; use eps in DVI mode
-\usepackage{enumitem}                               % TeX will automatically convert eps --> pdf in pdflatex    
+\documentclass[10pt, oneside]{resume}
+\usepackage{enumitem}
 \usepackage{amssymb}
 \usepackage{titling}
 \usepackage{hyperref}
 \usepackage{xstring}
 \usepackage{tikz}
-\usetikzlibrary{arrows}
-\DeclareTextSymbolDefault{\textbullet}{OMS}
-\pagenumbering{gobble}
-
-\newcommand{\pspace}
-{
-  \vspace{-0.05 in}
-}\pspace
-
-\newcommand{\myrule} [3] []
-{
-        \begin{tikzpicture}
-     \draw[#2-#3, ultra thick, #1] (0,0) to (0.5\linewidth,0);
-      \draw[#2-#3,ultra thick, #1] (0.5\linewidth,0) to (\linewidth,0);
-   \end{tikzpicture}
-}
-
-\newcommand{\li}{-0.07 in}
-
-\name{Kartik Talwar} % Your name
-%\address{123 Broadway \\ City, State 12345} % Your address
-%\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
-\address{(646) 389-4089 \\ kartik@kartikt.com \\ github.com/kartiktalwar} % Your phone number and email
+\usepackage[top = 1 cm, bottom = 1 cm, headsep = 0 pt, headheight = 0 pt, width = 18.00 cm] {geometry}
 
 
-\date{}
+\name{Kartik Talwar}
+\address{(646) 389-4089 \\ kartik@kartikt.com \\ github.com/kartiktalwar}
+
+
 \begin{document}
 
-% \begin{tabular*}{7in}{l@{\extracolsep{\fill}}ll}
-% \textbf{\Large Kartik Talwar} & \href{https://twitter.com/TheRealKartik}{\nolinkurl{@TheRealKartik}} & 646-389-4089 \\
 
-%  & \href{http://kartikt.com}{\nolinkurl{http://kartikt.com} } & \href{mailto:kartik@kartikt.com}{\nolinkurl{kartik@kartikt.com}}
-%  \\
+  \begin{rSection}{Technical Skills}
 
-% \end{tabular*}
-% \hrule height 0.5pt
+    \begin{tabular}{ @{} >{\bfseries}l @{\hspace{5ex}\textemdash\hspace{3ex}} l}
+      Languages & Python, PHP, JavaScript/Node.js, Ruby, C\verb!++!, Java, C, LabVIEW \\
+      Databases &  MySQL, Firebase, ElasticSearch, Riak, MongoDB, SQLite, OracleDB \\
+      Web       &  GitHub, AWS, WordPress, [Facebook, Twitter, Twilio, Google] API \\
+      Markup    &  HTML, CSS, XML, JSON, MarkDown, Puppet, \LaTeX  \\
+      Tools     &  Git, Vim, Sublime, Eclipse, Putty, Dreamweaver, Photoshop, Office  \\
+      OS        &  Windows, *nix, Mac, Android \\
+    \end{tabular}
+
+  \end{rSection}
+
+
+  \begin{rSection}{Work Experience}
+
+    \begin{rSubsection}{API Developer}{University of Waterloo}{San Francisco}{Present}
+      \item Lead developer for the University of Waterloo API
+      \item Maintainer of open source contributions and developer community
+    \end{rSubsection}
 
-\newcommand{\CC}
-{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf+}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf+}}\def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf++}}}
+    \begin{rSubsection}{Teaching Assistant}{University of Waterloo}{Waterloo}{2013}
+      \item Assistant for Computational Physics under Dr. Chris O’Donovan
+      \item Responsible for conducting tutorials, proctoring and assignment help
+    \end{rSubsection}
 
-\section*{\large{Strengths \& Highlights}\vspace{1.25 pt} \hrule height 0.0pt}
-\begin{tabular}{lll}
+    \begin{rSubsection}{Infrastructure Software Developer}{Salesforce}{San Francisco}{2013}
+      \item Member of datacenter automation and infrastructure capacity planning
+      \item Developed cluster monitoring, analysis and automation tools
+    \end{rSubsection}
 
-\bf{Languages} & \textemdash & Python, PHP, JavaScript/Node.js, Ruby, C\verb!++!, Java, C, LabVIEW \\
-\bf{Databases} & \textemdash &  MySQL, Firebase, ElasticSearch, Riak, MongoDB, SQLite, OracleDB \\
-\bf{Web} & \textemdash &  GitHub, AWS, WordPress, [Facebook, Twitter, Twilio, Google] API \\
-\bf{Markup} & \textemdash &  HTML, CSS, XML, JSON, MarkDown, Puppet, \LaTeX  \\
-\bf{Tools} & \textemdash &  Git, Vim, Sublime, Eclipse, Putty, Dreamweaver, Photoshop, Office  \\
-\bf{OS} & \textemdash &  Windows, *nix, Mac, Android \\
-% \bf{Various} & \textemdash &  Sense of humor, Approximate knowledge of many things \\
-\end{tabular}
-% \end{}
-% \end{rSection}
+    \begin{rSubsection}{Data Specialist}{University of Waterloo}{Waterloo}{2012}
+      \item Architected processes for accessing and opening data from University systems
+      \item Merged existing (internal and external) APIs into a central location
+    \end{rSubsection}
 
+    \begin{rSubsection}{Software Engineer}{Tagged}{San Francisco}{2012}
+      \item Worked on real-time logging infrastructure and abnormal cluster behavior detections
+      \item Winner of Tagged 2012 Hackathon
+    \end{rSubsection}
 
+    \begin{rSubsection}{User Interface Engineer}{Bookneto}{Kitchener}{2011}
+      \item Defined the visual appeal of the site, in terms of UI and UX
+      \item Designed and modeled the front-end user interface for the Analytics Platform
+    \end{rSubsection}
 
-\begin{rSection}{Work Experience}
+    \begin{rSubsection}{Freelance Developer}{Elance}{Toronto}{2008 - 2012}
+      \item Specialized in WordPress development and social media brand development
+    \end{rSubsection}
 
-  \begin{rSubsection}{API Developer}{University of Waterloo}{San Francisco}{Present}
-    \item Lead developer for the University of Waterloo API
-    \item Maintainer of open source contributions and developer community
-  \end{rSubsection}
+  \end{rSection}
 
-  \begin{rSubsection}{Teaching Assistant}{University of Waterloo}{Waterloo}{2013}
-    \item Assistant for Computational Physics under Dr. Chris O’Donovan
-    \item Responsible for conducting tutorials, proctoring and assignment help
-  \end{rSubsection}
 
-  \begin{rSubsection}{Infrastructure Software Developer}{Salesforce}{San Francisco}{2013}
-    \item Member of datacenter automation and infrastructure capacity planning
-    \item Developed cluster monitoring, analysis and automation tools
-  \end{rSubsection}
+  \begin{rSection}{Extracurriculars}
 
-  \begin{rSubsection}{Data Specialist}{University of Waterloo}{Waterloo}{2012}
-    \item Architected processes for accessing and opening data from University systems
-    \item Merged existing (internal and external) APIs into a central location
-  \end{rSubsection}
+    \begin{rSubsection}{Vice President}{Undergraduate Physics Society}{}{2011 - Present}
+      \item Responsible for event planning, student outreach and bringing donuts to class
+      \item Member of the Board of Directors at the Science Society
+    \end{rSubsection}
 
-  \begin{rSubsection}{Software Engineer}{Tagged}{San Francisco}{2012}
-    \item Worked on real-time logging infrastructure and abnormal cluster behavior detections
-    \item Winner of Tagged 2012 Hackathon
-  \end{rSubsection}
+    \begin{rSubsection}{Velocity Incubator}{University of Waterloo}{}{2012-2013}
+      \item Residence for student innovators, tech enthusiasts and entrepreneurs
+      \item Helped startups in Communitech with product and software development
+    \end{rSubsection}
 
-  \begin{rSubsection}{User Interface Engineer}{Bookneto}{Kitchener}{2011}
-    \item Defined the visual appeal of the site, in terms of UI and UX
-    \item Designed and modeled the front-end user interface for the Analytics Platform
-  \end{rSubsection}
+    \begin{rSubsection}{Vice President}{University of Waterloo Web Designers Club}{}{2010 - 2011}
+      \item Planned and developed lectures and tutorials for novice developers on the basics of web design and development (HTML, CSS, PHP, SQL, WordPress)
+    \end{rSubsection}
 
-  \begin{rSubsection}{Freelance Developer}{Elance}{Toronto}{2008 - 2012}
-    \item Specialized in WordPress development and social media brand development
-  \end{rSubsection}
+    \begin{rSubsection}{Team Captain}{Emery CI FIRST Robotics Team}{}{2007-2010}
+      \item Managed the mechanical, electrical, media and programming teams
+      \item Led the team to 8th alliance captain position at Waterloo Regional 
+    \end{rSubsection}
 
-\end{rSection}
+  \end{rSection}
 
 
-\begin{rSection}{Extracurriculars}
+  \begin{rSection}{Volunteer Work}
 
-  \begin{rSubsection}{Vice President}{Undergraduate Physics Society}{}{2011 - Present}
-    \item Responsible for event planning, student outreach and bringing donuts to class
-    \item Member of the Board of Directors at the Science Society
-  \end{rSubsection}
+    \begin{rSubListing}
+      \item {{\bfseries Regional Organizer}, PennApps/MHacks/HackMIT/Y-Hack/UofT Hacks \hfill 2013-2014}
+      \item {{\bfseries Technical Mentor}, San Francisco CoderDojo \hfill 2012-2013}
+      \item {{\bfseries Event Organizer}, TEDxUW \hfill 2011}
+      \item {{\bfseries Physics Representative}, University of Waterloo \hfill 2010}
+      \item {{\bfseries Homecoming Volunteer}, University of Waterloo \hfill 2010}
+      \item {{\bfseries Math Peer Tutor}, Emery CI \& Humber Summit Middle School \hfill 2009-2010}
+      \item {{\bfseries Cyber-Science/Robotics Club Representative}, Emery CI \hfill 2008-2010}
+      \item {{\bfseries Head Light Technician}, Emery CI \hfill 2007-2010}
+    \end{rSubListing}
 
-  \begin{rSubsection}{Velocity Incubator}{University of Waterloo}{}{2012-2013}
-    \item Residence for student innovators, tech enthusiasts and entrepreneurs
-    \item Helped startups in Communitech with product and software development
-  \end{rSubsection}
+  \end{rSection}
 
-  \begin{rSubsection}{Vice President}{University of Waterloo Web Designers Club}{}{2010 - 2011}
-    \item Planned and developed lectures and tutorials for novice developers on the basics of web design and development (HTML, CSS, PHP, SQL, WordPress)
-  \end{rSubsection}
 
-  \begin{rSubsection}{Team Captain}{Emery CI FIRST Robotics Team}{}{2007-2010}
-    \item Managed the mechanical, electrical, media and programming teams
-    \item Led the team to 8th alliance captain position at Waterloo Regional 
-  \end{rSubsection}
+  \begin{rSection}{Awards}
 
-\end{rSection}
+    \begin{rSubListing}
+      \item {Winner - AngelHack Silicon Valley}
+      \item {Top10 - University of Toronto Hackathon}
+      \item {Finalist - Greylock Hackfest }
+      \item {Desktop Automation Winner - Salesforce DevOps Hackathon }
+      \item {Launch Hackathon - Yammer Award Winner }
+      \item {University of Waterloo Physics Alumni Award }
+      \item {University of Waterloo Merit Scholarship }
+      \item {Emery Collegiate Institute Merit Scholarship }
+      \item {Robotics Scholarship }
+      \item {Community Leadership Scholarship }
+      \item {Emery CI Honor Roll (All Semesters) \& Ontario Scholars’ Award }
+      \item {Finalist and a nominee for the Tory’s LLP Patent Award }
+      \item {Bronze Level achiever for The Duke of Edinburgh Award }
+      \item {Silver medal winner at the Apotex Innovators Fair }
+      \item {Physics and Math Award for exemplary academic achievement }
+      \item {Winner of York University Olympics Robocode event}
+    \end{rSubListing}
 
+  \end{rSection}
 
 
- 
+  \begin{rSection}{Education}
 
-\section*{\large{Volunteer Work}\vspace{1.25 pt}\hrule height 0.0 pt}
+    \begin{rEducation}{Candidate for Bachelor of Science}{University of Waterloo}{2010 - 2015}
+      \item Computational Physics, Astrophysics, Linear Algebra, Calculus
+    \end{rEducation}
 
-  \vspace{ 0.05 in}
+    \begin{rEducation}{Ontario Secondary School Diploma}{Emery Collegiate Institute}{2006 - 2010}
+      \item Computer Engineering, Advanced Functions, Calculus, Physics
+    \end{rEducation}
 
-  \begin{itemize}
-    \item {\normalsize{\bfseries Regional Organizer}, PennApps/MHacks/HackMIT/Y-Hack/UofT Hacks \hfill 2013-2014}
-    \vspace{\li}
+  \end{rSection}
 
-    \item {\normalsize{\bfseries Technical Mentor}, San Francisco CoderDojo \hfill 2012-2013}
-    \vspace{\li}
 
-    \item {\normalsize{\bfseries Event Organizer}, TEDxUW \hfill 2011}
-    \vspace{\li}
-
-    \item {\normalsize{\bfseries Physics Representative}, University of Waterloo \hfill 2010}
-    \vspace{\li}
-
-    \item {\normalsize{\bfseries Homecoming Volunteer}, University of Waterloo \hfill 2010}
-    \vspace{\li}
-
-    \item {\normalsize{\bfseries Math Peer Tutor}, Emery CI \& Humber Summit Middle School \hfill 2009-2010}
-    \vspace{\li}
-
-    \item {\normalsize{\bfseries Cyber-Science/Robotics Club Representative}, Emery CI \hfill 2008-2010}
-    \vspace{\li}
-
-    \item {\normalsize{\bfseries Head Light Technician}, Emery CI \hfill 2007-2010}
-    \vspace{\li}
-
-  \end{itemize}
-
-
-\section*{\large{Honors \& Achievements}\vspace{1.25 pt}\hrule height 0.0 pt}
-
-  \vspace{ 0.05 in}
-
-  \begin{itemize}
-    \item {\normalsize{Winner - AngelHack Silicon Valley}}
-    \vspace{\li}
-
-    \item {\normalsize{Top10 - University of Toronto Hackathon}}
-    \vspace{\li}
-
-    \item {\normalsize{Finalist - Greylock Hackfest }}
-    \vspace{\li}
-
-    \item {\normalsize{Desktop Automation Winner - Salesforce DevOps Hackathon }}
-    \vspace{\li}
-
-    \item {\normalsize{Launch Hackathon - Yammer Award Winner }}
-    \vspace{\li}
-
-    \item {\normalsize{University of Waterloo Physics Alumni Award }}
-    \vspace{\li}
-
-    \item {\normalsize{University of Waterloo Merit Scholarship }}
-    \vspace{\li}
-
-    \item {\normalsize{Emery Collegiate Institute Merit Scholarship }}
-    \vspace{\li}
-
-    \item {\normalsize{Robotics Scholarship }}
-    \vspace{\li}
-
-    \item {\normalsize{Community Leadership Scholarship }}
-    \vspace{\li}
-
-    \item {\normalsize{Emery CI Honor Roll (All Semesters) \& Ontario Scholars’ Award }}
-    \vspace{\li}
-
-    \item {\normalsize{Finalist and a nominee for the Tory’s LLP Patent Award }}
-    \vspace{\li}
-
-    \item {\normalsize{Bronze Level achiever for The Duke of Edinburgh Award }}
-    \vspace{\li}
-
-    \item {\normalsize{Silver medal winner at the Apotex Innovators Fair }}
-    \vspace{\li}
-
-    \item {\normalsize{Physics and Math Award for exemplary academic achievement }}
-    \vspace{\li}
-
-    \item {\normalsize{Winner of York University Olympics Robocode event}}
-    \vspace{\li}
-  \end{itemize}
-  \vspace{-0.18 in}
-
-
-
-\section*{\large{Education} \vspace{1.25 pt}\hrule height 0.0pt}
-  \vspace{ 0.05 in}
-
-  \subsection*{\normalsize{Candidate for Bachelor of Science \hfill 2010 - 2015}}
-    \vspace{ -0.10 in}
-    {\normalsize{University of Waterloo}} \\
-    {\normalsize{\indent \bfseries{Relevant Courses:} Computational Physics, Astrophysics, Linear Algebra, Calculus}}
-    \vspace{ -0.05 in}
-
-  \subsection*{\normalsize{Ontario Secondary School Diploma \hfill 2006 - 2010}}
-    \vspace{ -0.10 in}
-    {\normalsize{Emery Collegiate Institute}} \\
-    {\normalsize{\indent \bfseries{Relevant Courses:} Computer Engineering, Advanced Functions, Calculus, Physics}}
-    \vspace{ 0.00 in}
-
-
-
-\end{document}  
+\end{document}
