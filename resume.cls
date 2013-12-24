@@ -152,6 +152,15 @@
 }
 
 
+\newenvironment{rProject}{ % 4 input arguments - company name, year(s) employed, job title and location
+  \begin{list}{}{\leftmargin=0em\rightmargin=0.75em} % \cdot used for bullets, no indentation
+   \itemsep -0.5 em \vspace{0.05 em} % Compress items in list together for aesthetics
+  }{
+  \end{list}
+  \vspace{-0.2 em} % Some space after the list of bullet points
+}
+
+
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
 \def\namesize{\huge} % Size of the name at the top of the document
 \def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
