@@ -148,7 +148,7 @@
     {\bfseries{#1}}, #2, {\em #3} \hfill {\StrReplace{ }{}{#4}} % Print italicized location if specified
   }
   \smallskip
-  \em\begin{list}{\bfseries{Relevant Courses:}}{\leftmargin=3.5em\rightmargin=\dimexpr\linewidth-14cm-\leftmargin\relax} % prefix li with 'Relevant Courses:'
+  \em\begin{list}{}{\leftmargin=1.5em\rightmargin=\dimexpr\linewidth-16cm-\leftmargin\relax} % prefix li with 'Relevant Courses:'
   \itemsep -0.5 em \vspace{-0.7 em}
   }{
   \end{list}
